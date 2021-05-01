@@ -1,1 +1,1 @@
-# Prepare your PC
+# Preparing your PC
