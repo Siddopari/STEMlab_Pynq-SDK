@@ -1,6 +1,6 @@
 # Introduction
 ## About my first experience with FPGAs
-I discovered my passion for fast programable logic during my PhD in (quantum) physics. In fact, almost every part of the experimental setup I worked on ended up having a dedicated microcontroller or FPGA. Very helpful in these regards was the Arduino IDE, which makes microcontrollers accessible to the _profane_ folks, i.e. makers, enthusiasts and scientists without a degree in electrical engineering. 
+I discovered my passion for fast programable logic during my PhD in (quantum) physics. In fact, almost every part of the experimental setup I worked on ended up having a dedicated microcontroller or FPGA. Very helpful in these regards was the Arduino IDE, which made microcontrollers accessible to the _profane_ folks, i.e. makers, enthusiasts and scientists without a degree in electrical engineering. 
 
 The situation is different for FPGAs, where learning VHDL/Verilog, understanding how to write synthesizable code, using the huge Xilinx/Intel toolchain, understanding the chipset architecture... involves a steep initial learning curve and a significant amount of frustration. But once this hurdle is overcome, you become capable of writing your own signal generators, custom acquisition systems, control electronics and you are able to replace many of your old OP-27 circuits with an FPGA running a few lines of code. I had no prior experience in FPGA programming and to reach this point took me around 6 months. 
 ## About these notes
