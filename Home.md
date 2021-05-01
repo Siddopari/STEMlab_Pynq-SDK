@@ -14,8 +14,8 @@ These notes intend to speed up the initial learning curve by providing working e
 
 ## Outline
 * [Setting up your system](Setting-up-your-system)
-* [LED blink]
-* [Analogue echo]
+* [LED blink](LED-blink)
+* [Analogue echo](Analogue-echo)
 
 
 
