@@ -13,7 +13,10 @@ These notes intend to speed up the initial learning curve by providing working e
 * [PYNQ](http://www.pynq.io/): Python environment to control FPGA designs and stream data into/out of them. It is based on Jupyter Notebooks that are executed on the ARM processor of the Zynq-7010.
 
 ## Outline
-1. [Setting up your system](Setting-up-your-system)
+#### [Setting up your system](Setting-up-your-system)
+#### [LED blink]
+#### [Analogue echo]
+
 
 
 
