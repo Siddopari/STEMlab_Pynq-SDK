@@ -89,7 +89,7 @@ Overlays are file bundles created around a custom FPGA image, which include the 
 * Open Vivado.
 * Open the upper toolbar and go to *Tools --> Custom Commands --> Customize Commands*.
 * Add a new command that executes *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl*
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/customTclCommand.png" width="600"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/customTclCommand.PNG" width="600"/>
 
 
 
