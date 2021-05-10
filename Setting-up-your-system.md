@@ -36,7 +36,7 @@ To be able to generate your custom FPGA designs, it is recommended to use a boar
 sudo vi /etc/network/interfaces.d/eth0
 ```
 
-* Press *a* and edit the file (\<static-ip-address\> and \<net-mask\> are placeholders, replace them with the corresponding static IP address of your choice and the netmask of your local network):
+* Press *a* and edit the file (*\<static-ip-address\>* and *\<net-mask\>* are placeholders, replace them with the corresponding static IP address of your choice and the netmask of your local network):
 ```bash
 auto eth0
 iface eth0 inet dhcp
@@ -69,7 +69,7 @@ ssh xilinx@<static-ip-address>
 ## 3. Speed up the design flow
 ### 3.1 Define a RSA key pair
 We will generate an RSA key pair that will prevent you from using the *xilinx* password in your SSH and SCP commands:
-* Open a command line terminal (**IMPORTANT**: within Windows use the Git Bash Terminal or the Linux Subsystem Terminal for this). 
+* Open a command line terminal. **NOTE**: for Windows please use the *Git Bash Terminal* or the *Linux Subsystem Terminal* for the following steps.
 * Generate the key pair:
 ```bash
 ssh-keygen -t rsa
@@ -99,7 +99,7 @@ Overlays are file bundles created around a custom FPGA image, which include the 
 #############################
 # PARAMETERS
 #############################
-set ip 192.168.1.99 #Replace with <static-ip-address>
+set ip 192.168.1.99 # Replace with <static-ip-address>
 set user xilinx
 #############################
 cd [get_property DIRECTORY [current_project]]
