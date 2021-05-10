@@ -85,7 +85,13 @@ ssh xilinx@<static-ip-address>
 ```
 
 ### 3.2. Create a Vivado shortcut to upload overlays
-Overlays are file bundles created around a custom FPGA image, which include the generated bitstream and *hardware handoff* files that provide information on the instantiated IPs, memory interfaces, etc. These files are typically manually collected from the Vivado project, renamed and uploaded to the FPGA. The process is fairly simple but will require a few minutes of your time. I have created a simple TCL script that fully automates this process and which can be launched via a shortcut in the Vivado IDE. To set this up, you need to:
+Overlays are file bundles created around a custom FPGA image, which include the generated bitstream and *hardware handoff* files that provide information on the instantiated IPs, memory interfaces, etc. These files are typically manually collected out of the Vivado project, renamed and uploaded to the FPGA. The process is simple but require a few minutes of your time. I have created a simple TCL script that fully automates this process and which can be launched via a shortcut in the Vivado IDE. To set this up, you need to:
+* Open Vivado.
+* Open the upper toolbar and go to *Tools --> Custom Commands --> Customize Commands*.
+* Add a new command that executes *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl*
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/customTclCommand.png" width="600"/>
+
+
 
 
 
