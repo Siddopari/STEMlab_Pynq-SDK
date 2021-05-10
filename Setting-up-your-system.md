@@ -62,14 +62,18 @@ ssh xilinx@<static-ip-address>
 * Open your web browser and navigate to \<static-ip-address\>. You should be prompted to the Jupyter Notebook welcome page (password: *xilinx*).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="1200"/>
 
-* The PYNQ image includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive (*). This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). 
+* The PYNQ image includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive. This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). 
 
-**(*) NOTE**: Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
+***
+
+:information_source: **INFO** Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
+
+***
 
 ## 3. Speed up the design flow
 ### 3.1 Define a RSA key pair
 We will generate an RSA key pair that will prevent you from using the *xilinx* password in your SSH and SCP commands:
-* Open a command line terminal (*). 
+* Open a command line terminal (for Windows see :warning:). 
 * Generate the key pair:
 ```bash
 ssh-keygen -t rsa
@@ -84,7 +88,12 @@ ssh-copy-id xilinx@<static-ip-address>
 ssh xilinx@<static-ip-address>
 ```
 
-**(*) NOTE**: the *ssh-copy-id* command is not supported within the regular Windows CMD, you can use instead the *Git Bash Terminal* or the *Linux Subsystem Terminal* for all the steps of this section.
+***
+
+:warning: **WARNING** The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section.
+
+***
+
 ### 3.2. Create a Vivado shortcut to upload overlays
 Overlays are file bundles created around a custom FPGA image, which include the generated bitstream and *hardware handoff* files that provide information on the instantiated IPs, memory interfaces, etc. These files are typically manually collected out of the Vivado project, renamed and uploaded to the FPGA. The process is simple but require a few minutes of your time. I have created a simple TCL script that fully automates this process and which can be launched via a shortcut in the Vivado IDE. To set this up, you need to:
 * Open Vivado.
