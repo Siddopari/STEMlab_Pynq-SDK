@@ -15,8 +15,8 @@ git clone https://github.com/dspsandbox/FPGA-Notes-for-Scientists
 
 ### 1.4. Install the Redpitaya-125-14 board files
 To be able to generate your custom FPGA designs, it is recommended to use a board files that pre-configures your Vivado design environment. To date, no official board files for the Redpitaya-125-14 exist. For this reason, I created a custom board file that includes the most important settings of the Redpitaya-125-14. To install them, you have to:
-* Within the cloned repository, navigate to *\<FPGA-Notes-for-Scientists\>/board_files* and copy the *redpitaya-125-14* folder.
-* Within your Vivado installation path navigate to *\<Vivado-Path\>/data/boards/board_files* and paste the *redpitaya-125-14* folder. 
+* Navigate to *\<FPGA-Notes-for-Scientists\>/board_files* and copy the *redpitaya-125-14* folder.
+* Navigate to *\<Vivado-Install-Path\>/data/boards/board_files* and paste the *redpitaya-125-14* folder. 
 
 ## 2. Prepare your Redpitaya-125-14
 ### 2.1. SD card image
