@@ -62,7 +62,7 @@ ssh xilinx@<static-ip-address>
 
 * The PYNQ image includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive. This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). 
 
-**NOTE**: Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers between can also be done via SCP. 
+**NOTE**: Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
 
 
 
