@@ -66,15 +66,15 @@ ssh xilinx@<static-ip-address>
 
 **NOTE**: Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
 
-# 3. Speed up the design flow
-### 3.1 Define a key pair
+## 3. Speed up the design flow
+### 3.1 Define a RSA key pair
 We will generate an RSA key pair that will prevent you from using the *xilinx* password in your SSH and SCP commands:
 * Open a command line terminal (**IMPORTANT**: within Windows use the Git Bash Terminal or the Linux Subsystem Terminal for this). 
-* Generate a key pair:
+* Generate the key pair:
 ```bash
 ssh-keygen -t rsa
 ```
-* You can proceed with the default configurations and hit *Enter*
+* You can proceed with the default configurations and hit *Enter*.
 * Upload the the generated key pair to the Redpitaya-125-14 (password: *xilinx*).
 ```bash
 ssh-copy-id xilinx@<static-ip-address>
