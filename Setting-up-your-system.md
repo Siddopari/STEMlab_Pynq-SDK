@@ -1,4 +1,4 @@
-## 1. Preparing your PC
+## 1. Prepare your PC
 ### 1.1. System Requirements
 The system requirements are detailed within the Vivado User Guide UG973. To summarize, you are typically fine with:
 * OS: Windows & Linux
@@ -20,7 +20,7 @@ To be able to generate your custom FPGA designs, it is recommended to use a boar
 
 ## 2. Prepare your Redpitaya-125-14
 ### 2.1. SD card image
-* Download [Pynq-Redpitaya-125-14-2.6.0.img](https://drive.google.com/file/d/1YY4HYoDWa3E1ZVyxrV7naTFVoDieKrwm/view)
+* Download [Pynq-Redpitaya-125-14-2.6.0.img](https://drive.google.com/file/d/1YY4HYoDWa3E1ZVyxrV7naTFVoDieKrwm/view). For more information on how the PYNQ image was built see [here](https://github.com/dspsandbox/Pynq-Redpitaya-125).
 * Write the PYNQ image onto your SD card. You can find detailed instructions [here](https://pynq.readthedocs.io/en/v2.6.1/appendix.html#writing-the-sd-card-image).
 
 ### 2.2. Power up the Redpitaya-125-14
@@ -65,6 +65,28 @@ ssh xilinx@<static-ip-address>
 * The PYNQ image includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive. This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). 
 
 **NOTE**: Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
+
+# 3. Speed up the design flow
+### 3.1 Define a key pair
+We will generate an RSA key pair that will prevent you from using the *xilinx* password in your SSH and SCP commands:
+* Open a command line terminal (**IMPORTANT**: within Windows use the Git Bash Terminal or the Linux Subsystem Terminal for this). 
+* Generate a key pair:
+```bash
+ssh-keygen -t rsa
+```
+* You can proceed with the default configurations and hit *Enter*
+* Upload the the generated key pair to the Redpitaya-125-14 (password: *xilinx*).
+```bash
+ssh-copy-id xilinx@<static-ip-address>
+```
+* Verify that you can use SSH without having to provide a password.
+```bash
+ssh xilinx@<static-ip-address>
+```
+
+### 3.2. Create a Vivado shortcut to upload overlays
+Overlays are file bundles created around a custom FPGA image, which include the generated bitstream and *hardware handoff* files that provide information on the instantiated IPs, memory interfaces, etc. These files are typically manually collected from the Vivado project, renamed and uploaded to the FPGA. The process is fairly simple but will require a few minutes of your time. I have created a simple TCL script that fully automates this process and which can be launched via a shortcut in the Vivado IDE. To set this up, you need to:
+
 
 
 
