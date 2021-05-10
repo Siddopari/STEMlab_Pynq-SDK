@@ -36,7 +36,7 @@ To be able to generate your custom FPGA designs, it is recommended to use a boar
 sudo vi /etc/network/interfaces.d/eth0
 ```
 
-* Press *a* and edit the file:
+* Press *a* and edit the file (\<static-ip-address\> and \<net-mask\> are placeholders, replace them with the corresponding static IP address of your choice and the netmask of your local network):
 ```bash
 auto eth0
 iface eth0 inet dhcp
@@ -88,8 +88,26 @@ ssh xilinx@<static-ip-address>
 Overlays are file bundles created around a custom FPGA image, which include the generated bitstream and *hardware handoff* files that provide information on the instantiated IPs, memory interfaces, etc. These files are typically manually collected out of the Vivado project, renamed and uploaded to the FPGA. The process is simple but require a few minutes of your time. I have created a simple TCL script that fully automates this process and which can be launched via a shortcut in the Vivado IDE. To set this up, you need to:
 * Open Vivado.
 * Open the upper toolbar and go to *Tools --> Custom Commands --> Customize Commands*.
-* Add a new command that executes *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl*
+* Add a new command that executes *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/customTclCommand.PNG" width="600"/>
+
+* Close Vivado.
+
+* Open *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl* and insert the IP of your Redpitaya-125-14:
+
+```tcl
+#############################
+# PARAMETERS
+#############################
+set ip 192.168.1.99 #Replace with <static-ip-address>
+set user xilinx
+#############################
+cd [get_property DIRECTORY [current_project]]
+set projName [get_property NAME [current_project]]
+# ...
+```
+
+* Save and close the file.
 
 
 
