@@ -32,7 +32,9 @@ To be able to generate your custom FPGA designs, it is recommended to use a boar
 
 ### 2.3. Assign a static IP address
 * Use the **CON** terminal to enter the network configurations (password: *xilinx*):
+```bash
 sudo vi /etc/network/interfaces.d/eth0
+```
 
 * Press *a* and edit the file:
 ```bash
