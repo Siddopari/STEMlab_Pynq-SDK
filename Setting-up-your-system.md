@@ -60,7 +60,7 @@ ssh xilinx@<static-ip-address>
 
 ### 2.4 Verify Jupyter server & Samba file sharing service
 * Open your web browser and navigate to \<static-ip-address\>. You should be prompted to the Jupyter Notebook welcome page (password: *xilinx*).
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="600"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="1200"/>
 
 * The PYNQ image includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive. This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). 
 
