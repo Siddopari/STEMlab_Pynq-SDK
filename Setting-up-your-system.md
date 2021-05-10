@@ -20,8 +20,8 @@ To be able to generate your custom FPGA designs, it is recommended to use a boar
 
 ## 2. Prepare your Redpitaya-125-14
 ### 2.1. SD card image
-* Download the [Pynq-Redpitaya-125-14-2.6.0.img](https://drive.google.com/file/d/1YY4HYoDWa3E1ZVyxrV7naTFVoDieKrwm/view)
-* Write the Pynq image onto the SD card. You can find detailed instructions [here](https://pynq.readthedocs.io/en/v2.6.1/appendix.html#writing-the-sd-card-image).
+* Download [Pynq-Redpitaya-125-14-2.6.0.img](https://drive.google.com/file/d/1YY4HYoDWa3E1ZVyxrV7naTFVoDieKrwm/view)
+* Write the PYNQ image onto your SD card. You can find detailed instructions [here](https://pynq.readthedocs.io/en/v2.6.1/appendix.html#writing-the-sd-card-image).
 
 ### 2.2. Power up the Redpitaya-125-14
 * Insert the SD card into your Redpitaya-125-14.
