@@ -93,7 +93,7 @@ Overlays are file bundles created around a custom FPGA image, which include the 
 
 * Close Vivado.
 
-* Open *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl* and insert the IP of your Redpitaya-125-14:
+* Open *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl* and insert the static IP address of your Redpitaya-125-14:
 
 ```tcl
 #############################
