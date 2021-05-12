@@ -1,4 +1,5 @@
 * [Home](Home)
 * [Setting up your system](Setting-up-your-system)
+* [Zynq architecture & Redpitaya-125-14](Zynq-architecture-&-Redpitaya-125-14)
 * [LED blink](LED-blink)
 * [Analogue echo](Analogue-echo)
