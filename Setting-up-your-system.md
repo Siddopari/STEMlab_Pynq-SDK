@@ -101,6 +101,9 @@ Overlays are file bundles created around a custom FPGA image, which include the 
 * Add a new command that executes *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/customTclCommand.PNG" width="600"/>
 
+* A new <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="25"/>
+ button should have appeared on the Vivado toolbar.
+
 * Close Vivado.
 
 * Open *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl* and insert the static IP address of your Redpitaya-125-14:
