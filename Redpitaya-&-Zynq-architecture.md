@@ -24,8 +24,8 @@ The diagram above outlines the basic components of the Redpitaya-125-14 board. A
 
 * The **PL** is the *actual* FPGA, which includes look-up-tables (LUTs), flip-flops, DSP logic, BRAM ... to implement custom designs. It is connected to (*): 
 
-    * **DAC** (x2, 125MSa/s, 14bit):  *fast* dual digital-to-analog converter that generates the waveforms for the OUT1 and OUT2 ports.
-    * **ADC** (x2, 125MSa/s, 14bit): *fast* dual analog-to-digital converter that samples the IN1 and IN2 ports.
+    * **DAC x2** (125MSa/s, 14bit):  *fast* dual digital-to-analog converter that generates the waveforms for the OUT1 and OUT2 ports.
+    * **ADC x2** (125MSa/s, 14bit): *fast* dual analog-to-digital converter that samples the IN1 and IN2 ports.
     * **xadc_i** (x4, 1MSa/s): *slow* analog-to-digital converters within the Zynq-7010.
     * **dig_o + LPF** (x4): digital outputs with analog low-pass filters (cut-off frequency: 190kHz). They can be used as *slow* digital-to-analog converters by performing pulse-width modulation (PWM) on the *dig_o* ports. 
    * **led_o** (x8): user LEDs.
