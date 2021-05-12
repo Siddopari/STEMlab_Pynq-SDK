@@ -66,7 +66,7 @@ ssh xilinx@<static-ip-address>
 
 ***
 
-:information_source: **INFO** Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
+:information_source: Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
 
 ***
 
@@ -90,7 +90,7 @@ ssh xilinx@<static-ip-address>
 
 ***
 
-:warning: **WARNING** The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section.
+:warning: The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section.
 
 ***
 
