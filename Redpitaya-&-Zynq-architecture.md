@@ -1,6 +1,6 @@
 ***
 
-:information_source: **INFO** For more details on the Redpitaya-125-14 platform and the Zynq chipset architecture, I recommend visit the [Redpitaya Developer Guide](https://redpitaya.readthedocs.io/en/latest/developerGuide/devGuideTop.html) and to read the [Zynq Book](http://www.zynqbook.com/).
+:information_source: For more details on the Redpitaya-125-14 platform and the Zynq chipset architecture, I recommend visit the [Redpitaya Developer Guide](https://redpitaya.readthedocs.io/en/latest/developerGuide/devGuideTop.html) and to read the [Zynq Book](http://www.zynqbook.com/).
 
 ***
 ## Schematic
