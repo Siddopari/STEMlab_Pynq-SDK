@@ -101,7 +101,7 @@ Overlays are file bundles created around a custom FPGA image, which include the 
 * Add a new command that executes *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/customTclCommand.PNG" width="600"/>
 
-* After pressing *OK*, a new <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="15"/> button should appear on the Vivado toolbar. 
+* After pressing *OK*, a new <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="15"/> button appears on the Vivado toolbar. Do not press it now, we will use it after bitstream creation.
 
 * Close Vivado.
 
