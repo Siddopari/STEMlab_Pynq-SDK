@@ -20,7 +20,7 @@ The diagram above outlines the basic components of the Redpitaya-125-14 board. A
 
     * **SD**: the SD card contains the boot image and root file system for Ubuntu 18.04 LTS.
 
-    * **RAM** (512 MB): random access memory of the PS. The PYNQ environment provides simple tools to reserve part of the memory and perform DMA operations, i.e data streams of type RAM --> PS --> PL for custom waveform synthesis and PL --> PS --> RAM for long waveform acquisition. 
+    * **RAM** (512 MB): random access memory for the PS. The PYNQ environment provides simple tools to reserve part of the memory and perform DMA operations, i.e data streams of type RAM --> PS --> PL for custom waveform synthesis and PL --> PS --> RAM for long waveform acquisition. 
 
 * The **PL** is the *actual* FPGA, which includes look-up tables (LUTs), flip-flops, DSP logic, BRAM ... to implement custom designs. It is connected to (*): 
 
