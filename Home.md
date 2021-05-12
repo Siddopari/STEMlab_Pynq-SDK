@@ -13,7 +13,7 @@ I am convinced that other _profane_ folks (scientists, makers and enthusiasts wi
 
 # Outline
 * [Setting up your system](Setting-up-your-system)
-* [Zynq & Redpitaya: 5 min speed dating](Zynq-&-Redpitaya:-5-min-speed-dating)
+* [Zynq architecture & Redpitaya-125-14](Zynq-architecture-&-Redpitaya-125-14)
 * [LED blink](LED-blink)
 * [Analogue echo](Analogue-echo)
 
