@@ -22,7 +22,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Use *Add File* to include the constraints file within *\<FPGA-Notes-for-Scientists\>/sdc/red_pitaya.xdc* and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addConstraints.PNG" width="450"/>
 
-* Under the *Boards* tab select Redpitaya-125-14 (see [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#Install-the-Redpitaya-125-14-board-files) for instructions to install Redpitaya-125-14 board files) and hit *Next*.
+* Under the *Boards* tab select Redpitaya-125-14 (see [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#Install-the-Redpitaya-125-14-board-files) for instructions to install the Redpitaya-125-14 board files) and hit *Next*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/defaultPart.PNG" width="450"/>
 
 * After finishing this initial configurations, a new Vivado Project is created. You will see the *Project Manager* page:
