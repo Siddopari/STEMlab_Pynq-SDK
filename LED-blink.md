@@ -42,7 +42,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Click on *Run Connection Automation* (green field above your design) to create the required clocking, reset and AXI interconnect infrastructure. To this end, within the configuration window only select *S_AXI*. We do not select *GPIO*, because we will manually configure & connect the AXI GPIO.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/connectionAutomation.PNG" width="450"/>
 
-* After running block & connection automation, the design will becomes:
+* After running block & connection automation, the design becomes:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqGpio_2.PNG" width="800"/>
 
 * Double-click on the AXI GPIO instance and enable Channel 1 and Channel 2 as outputs of 1 and 32 bits, respectively. Later in the design process, we will use Channel 1 to reset the counter logic and Channel 2 to define the counter increment value. 
