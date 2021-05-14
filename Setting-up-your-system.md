@@ -58,17 +58,11 @@ sudo reboot
 ssh xilinx@<static-ip-address>
 ```
 
-###  Verify Jupyter server & Samba file sharing service
-* Open your web browser and navigate to \<static-ip-address\>. You should be prompted to the Jupyter Notebook welcome page (password: *xilinx*).
+###  Verify PYNQ Server
+* Open your web browser and navigate to \<static-ip-address\>. You should be prompted to the PYNQ Jupyter Notebook welcome page (password: *xilinx*).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="1200"/>
 
-* The PYNQ image includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive. This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). 
-
-***
-
-:information_source: **INFO** Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP. 
-
-***
+* (OPTIONAL) The PYNQ image also includes a Samba file sharing service, which allows to access the file system as if it would be a remote drive. This is very handy to transfer files between your PC and the Redpitaya-125-14. The configuration process is described [here](https://pynq.readthedocs.io/en/v2.0/getting_started.html#accessing-files-on-the-board). Do not worry if your user permissions our your network settings do not allow you to access the Samba service. File transfers can also be done via SCP.
 
 ##  Speed up the design flow
 ### Define a RSA key pair
@@ -90,7 +84,7 @@ ssh xilinx@<static-ip-address>
 
 ***
 
-:warning: **WARNING** The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section.
+:warning: The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section.
 
 ***
 
