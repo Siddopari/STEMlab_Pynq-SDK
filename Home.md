@@ -14,8 +14,9 @@ I am convinced that other _profane_ folks (scientists, makers and enthusiasts wi
 # Outline
 * [Setting up your system](Setting-up-your-system)
 * [Redpitaya & Zynq architecture](Redpitaya-&-Zynq-architecture)
-* [LED blink](LED-blink)
-* [Analogue echo](Analogue-echo)
+* Tutorials:
+   * [LED blink](LED-blink)
+   * [Analogue echo](Analogue-echo)
 
 
 
