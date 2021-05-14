@@ -48,25 +48,25 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Double-click on the AXI GPIO instance and enable Channel 1 and Channel 2 as outputs of 1 and 32 bits, respectively. Later in the design process, we will use Channel 1 to reset the counter logic and Channel 2 to define the counter increment value. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/axiGpio.PNG" width="450"/>
 
-* Double-click on the ZYNQ instance and verify that *FCLK_CLK0* is enabled and set to 50 MHz (under *Clock Configuration --> PL Fabric Clocks*). 
+* Double-click on the ZYNQ instance and verify (under *Clock Configuration --> PL Fabric Clocks*) that *FCLK_CLK0* is enabled and set to 50 MHz. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqPLClk.PNG" width="450"/>
 
 ### Create a HDL counter
 * The next step is to create a counter logic with variable counter increment. Click on *Add Sources* (left panel) and select *Add or create design sources*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSourceVivado.PNG" width="450"/>
 
-* At this point you can either select and already existing HDL file or create a new one. We will follow the latter option:
+* At this point you can either select and already existing HDL file or create a new one. We will follow the latter.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/newSource.PNG" width="450"/>
 
-* Define the module ports (this can be changed later within the HDL code).
+* Define the module ports (they can also be changed later, within the HDL code).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/defineModule.PNG" width="350"/>
 
-* The new source file (*counter.vhd*) will be added to the source tree. Open it to create your custom counter logic:
+* The new source file (*counter.vhd*) will be added to the source tree. Open and edit it to include the counter logic.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="800"/>
 
 ***
 
-:information_source: You can use *\<FPGA-Notes-for-Scientists\>/hdl/counter.vhd* (link [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd)) as a template for a HDL counter.
+:information_source: You can use *\<FPGA-Notes-for-Scientists\>/hdl/counter.vhd* (link [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd)) as an example for the HDL counter logic.
 
 ***
 
