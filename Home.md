@@ -16,7 +16,7 @@ I am convinced that other _profane_ folks (scientists, makers and enthusiasts wi
 * [Redpitaya & Zynq architecture](Redpitaya-&-Zynq-architecture)
 * Tutorials:
    * [LED blink](LED-blink)
-   * [Analogue echo](Analogue-echo)
+   * [Analog echo](Analog-echo)
 
 
 
