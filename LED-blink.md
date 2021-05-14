@@ -69,12 +69,73 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Edit *counter.vhd* to include the counter logic (see :information_source:).
 
 * Add the HDL counter module to your design. To this end, right-click on the design and select *Add Module*.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addModule.PNG" width="200"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addModule.PNG" width="220"/>
 
 ***
 
-:information_source: A ready-to-use HDL counter is available under [*\<FPGA-Notes-for-Scientists\>/hdl/counter.vhd*](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
+:information_source: A ready-to-use HDL counter is available under [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
 
 ***
 
+### Constraints and signal routing
+* Open the constraints file (*red_pitaya.xdc*) and uncomment lines 180-191, which define and configure the FPGA ports connected to the LEDs.
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/ledSdc.PNG" width="800"/>
+
+* Return to your design, right-click and select *Create Port*. Name the port *led_o* and configure it as shown below:
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createPort.PNG" width="300"/>
+
+* Now we need to connect the MSB of the HDL counter to the output port. For this purpose, instantiate:
+   * Slice IP
+   * Concat IP
+
+* Configure the Slice IP to accept a 32 bit wide input and return the MSB.
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/slice.PNG" width="450"/>
+
+* Configure the Concat IP to bundle 8 inputs (1 bit wide).
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/concat.PNG" width="450"/>
+
+* Wire up the AXI GPIO, HDL counter, Slice IP, Concat IP and *led_o* port as shown below:
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/fullDesign.PNG" width="800"/>
+
+### Bitstream generation
+
+* Before bitstream generation, a HDL wrapper around the design needs to be created. Within your project source tree, right-click on top of your design  and select *Create HDL Wrapper* (use default settings).
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/hdlWrapper.PNG" width="800"/>
+
+
+* Click on *Generate Bitstream* (left panel) and proceed with the default settings. This will automatically take you through:
+     * **Synthesis**: translates the custom design FPGA design into logical elements such as flip-flops, LUTs...
+     * **Implementation**: places the logical elements of the synthesized design into the particular chip architecture.
+     * **Bitstream generation**: creates a binary image that contains the implemented design.
+
+* After a few minutes, the process completes. Press *Cancel* to close the the pop-up window.
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/bitstreamCompleted.PNG" width="200"/>
+
+## Running the design
+***
+:information_source: Please make sure to complete first the steps in [Prepare your Redpitaya-125-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#prepare-your-redpitaya-125-14) and [Speed up the design flow](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#speed-up-the-design-flow).
+***
+
+* Verify that you Redpitaya-125-14 is connected to your local network, e.g. using ping:
+```bash
+ping <static-ip-address>
+```
+
+* Create and upload the *overlay* for your custom design by pressing the <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="15"/> button. The following message should appear within your Vivado Tcl console:
+```bash
+Overlay "LED_blink" successfully uploaded to: 
+xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
+```
+
+* Open your preferred web browser and navigate to *\<static-ip-address\>* to enter the PYNQ Jupyter Notebook environment (password: *Xilinx*).
+
+* Create a new Python 3 Jupyter Notebook.
+
+* Open the Jupyter Notebook and edit it as shown in [LED_blink.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/LED_blink.ipynb). 
+
+* Run the Jupyter notebook. 
+
+ 
+
+ 
 
