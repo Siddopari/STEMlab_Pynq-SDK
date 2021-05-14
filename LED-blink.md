@@ -28,9 +28,6 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 
 ### Create a new Block Design
 
-* Create a new block design by clicking on *Create Block Design* (left panel). You can leave the default name, which will be *design_1*.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createBlockDesign.PNG" width="800"/>
-
 * Create a new block design by clicking on *Create Block Design* (left panel). The design name will default to *design_1*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createBlockDesign.PNG" width="800"/>
 
