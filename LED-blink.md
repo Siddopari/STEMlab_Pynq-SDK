@@ -54,6 +54,11 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqPLClk.PNG" width="450"/>
 
 ### Create a HDL counter
+***
+
+:information_source: A ready-to-use HDL counter is available under [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
+
+***
 * The next step is to create a counter logic with variable counter increment. Click on *Add Sources* (left panel) and select *Add or create design sources*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSourceVivado.PNG" width="450"/>
 
@@ -66,16 +71,12 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * The new source file (*counter.vhd*) will be added to the project source tree. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="800"/>
 
-* Edit *counter.vhd* to include the counter logic (see :information_source:).
+* Edit *counter.vhd* to include the counter logic (see [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) for a working example).
 
 * Add the HDL counter module to your design. To this end, right-click on the design and select *Add Module*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addModule.PNG" width="220"/>
 
-***
 
-:information_source: A ready-to-use HDL counter is available under [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
-
-***
 
 ### Constraints and signal routing
 * Open the constraints file (*red_pitaya.xdc*) and uncomment lines 180-191, which define and configure the FPGA ports connected to the LEDs.
