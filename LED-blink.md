@@ -128,7 +128,7 @@ Overlay "LED_blink" successfully uploaded to:
 xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
 ```
 
-* Open your preferred web browser and navigate to *\<static-ip-address\>* to enter the PYNQ Jupyter Notebook environment (password: *Xilinx*).
+* Open your preferred web browser and navigate to *\<static-ip-address\>* and enter the PYNQ Jupyter Notebook environment (password: *Xilinx*).
 
 * Create a new Python 3 Jupyter Notebook.
 
