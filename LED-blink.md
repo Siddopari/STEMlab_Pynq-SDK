@@ -1,4 +1,6 @@
-## About this tutorial
+## About this tutorial 
+:stopwatch: 30 min
+
 In this tutorial we are going to demonstrate how to blink the LEDs of your Redpitaya-124-14. The LEDs will be driven by the most-significant-bit (MSB) of a counter that continuously overflows. The counter is implemented within the Programable Logic (PL) and controlled through a simple PYQN Jupyter Notebook running on the Processing System (PS). 
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/LED_blink.gif" width="350"/>
