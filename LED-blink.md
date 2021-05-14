@@ -4,6 +4,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/LED_blink.gif" width="350"/>
 
 ## Building the Vivado Design
+### Create a new Vivado Project
 * Open Vivado and click on *Create Project* and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/startVivado.PNG" width="450"/>
 
@@ -25,6 +26,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * After finishing this initial configurations, a new Vivado Project is created. You will see the *Project Manager* page:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/projectSummary.PNG" width="800"/>
 
+### Create a new Block Design
 
 * Create a new block design by clicking on *Create Block Design* (left panel). You can leave the default name, which will be *design_1*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createBlockDesign.PNG" width="800"/>
@@ -49,23 +51,22 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Double-click on the ZYNQ instance and verify that *FCLK_CLK0* is enabled and set to 50 MHz (under *Clock Configuration --> PL Fabric Clocks*). 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqPLClk.PNG" width="450"/>
 
-* The next step is to create a counter logic with variable counter increment. The required steps are:
-   * Click on *Add Sources* (left panel) and select *Add or create design sources*.
+### Create a HDL counter
+* The next step is to create a counter logic with variable counter increment. Click on *Add Sources* (left panel) and select *Add or create design sources*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSourceVivado.PNG" width="450"/>
 
-
-   * At this point you can either select and already existing HDL file or create a new one. We will follow the latter option:
+* At this point you can either select and already existing HDL file or create a new one. We will follow the latter option:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/newSource.PNG" width="450"/>
 
-   * Define the module ports (this can be changed later directly within the HDL code).
+* Define the module ports (this can be changed later within the HDL code).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/defineModule.PNG" width="350"/>
 
-   * The new source file (*counter.vhd*) will be added to the source tree. Open it to create your custom counter logic:
+* The new source file (*counter.vhd*) will be added to the source tree. Open it to create your custom counter logic:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="800"/>
 
 ***
 
-:information_source: You can use *\<FPGA-Notes-for-Scientists\>/hdl/counter.vhd* (link [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd)) as a template for your custom counter.
+:information_source: You can use *\<FPGA-Notes-for-Scientists\>/hdl/counter.vhd* (link [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd)) as a template for a HDL counter.
 
 ***
 
