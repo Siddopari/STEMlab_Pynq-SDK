@@ -1,4 +1,3 @@
-# Introduction
 ## About my first experience with FPGAs
 I discovered my passion for FPGAs during my PhD in (quantum) physics. The first months were quite challenging, where learning VHDL/Verilog, understanding  the chipset architecture and using the huge Xilinx/Intel toolchain involved a steep initial learning curve and a significant amount of frustration. In fact, one of the biggest limitation was the lack of simple programming examples and hands-on tutorials. But once these hurdles were overcome, I became capable of designing my own signal generation/acquisition systems and I replaced multiple of the old OP-27 circuits with an FPGA running a few lines of code. 
 
