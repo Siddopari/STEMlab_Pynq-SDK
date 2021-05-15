@@ -11,7 +11,7 @@ I am convinced that other _profane_ folks (scientists, makers and enthusiasts wi
 
 * [PYNQ](http://www.pynq.io/): Python environment to control FPGA designs and stream data into/out of them. It is based on Jupyter Notebooks that are executed on the ARM processor of the Zynq SoC.
 
-# Outline
+# Table of contents
 * [Setting up your system](Setting-up-your-system)
 * [Redpitaya & Zynq architecture](Redpitaya-&-Zynq-architecture)
 * Tutorials:
