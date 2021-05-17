@@ -1,7 +1,22 @@
 ## About this tutorial 
 :stopwatch: 30 min
 
+**Key learnings:**
+
+* Create a new Vivado project & block design
+
+* Use the AXI GPIO to write data from PS to PL
+
+* Write custom HDL modules
+
+* Define board constraints
+
+* Create a simple Jupyter Notebook to control the FPGA design
+
+**Description**:
+
 In this tutorial we are going to demonstrate how to blink the LEDs of your Redpitaya-124-14. The LEDs will be driven by the most-significant-bit (MSB) of a counter that continuously overflows. The counter is implemented within the Programable Logic (PL) and controlled through a simple PYQN Jupyter Notebook running on the Processing System (PS). 
+
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/LED_blink.gif" width="400"/>
 
@@ -35,7 +50,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 
 * Right-click on the blank design and select *Add IP* to instantiate:
     * ZYNQ 7 Processing System
-    * AXI GPIO
+    * AXI GPIO (we will use this IP to write from PS to PL)
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqGpio_1.PNG" width="800"/>
 
 * Click on *Run Block Automation* (green field above your design) to route the DDR and FIXED_IO ports of the ZYNQ instance. To this end, leave the configuration window in its default state.
