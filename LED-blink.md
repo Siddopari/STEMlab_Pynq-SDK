@@ -34,7 +34,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Leave the _Add Sources_ screen empty and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSources.PNG" width="450"/>
 
-* Use *Add File* to include the constraints file within *\<FPGA-Notes-for-Scientists\>/sdc/red_pitaya.xdc* and hit _Next_.
+* Use *Add File* to include the constraints file within *\<FPGA-Notes-for-Scientists\>/sdc/redpitaya-125-14.xdc* and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addConstraints.PNG" width="450"/>
 
 * Under the *Boards* tab select Redpitaya-125-14 (see [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#Install-the-Redpitaya-125-14-board-files) for instructions to install the Redpitaya-125-14 board files) and hit *Next*.
@@ -94,7 +94,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 
 
 ### Constraints and signal routing
-* Open the constraints file (*red_pitaya.xdc*) and uncomment lines 166-177, which define and configure the FPGA ports connected to the LEDs.
+* Open the constraints file (*redpitaya-125-14.xdc*) and uncomment lines 166-177, which define and configure the FPGA ports connected to the LEDs.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/ledSdc.PNG" width="800"/>
 
 * Return to your design, right-click and select *Create Port*. Name the port *led_o* and configure it as shown below:
