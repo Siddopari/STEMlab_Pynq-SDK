@@ -2,7 +2,7 @@
 ###  System Requirements
 The system requirements are detailed within the Vivado User Guide UG973. To summarize, you are typically fine with:
 * OS: Windows or Linux
-* ~ 4GB of RAM
+* ~ 4GB RAM
 * ~ 50GB free storage 
 
 ###  Install Vivado WebPACK
