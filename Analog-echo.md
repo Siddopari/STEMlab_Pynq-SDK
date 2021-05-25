@@ -18,8 +18,8 @@ In this tutorial we are going to build a simple analog echo design, where the an
 |---|---|
 | 1 (yellow) | IN1 |
 | 2 (green) | IN2 |
-| 3 (blue) | OUT1 = IN1 + 0.25V|
-| 4 (red) | OUT2 = IN2 - 0.10V|
+| 3 (blue) | OUT1 = IN1 - 0.50V|
+| 4 (red) | OUT2 = IN2 + 0.25V|
 
 
 
