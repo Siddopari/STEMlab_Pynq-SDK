@@ -13,7 +13,7 @@ In this tutorial we are going to build a simple analog echo design, where the an
 
 ## Building the Vivado Design
 ### Create a new Vivado Project
-Follow the steps in [LED blink](../LED-blink#create-a-new-vivado-project) and name it *analog_echo*. 
+Follow the steps in [LED blink](../LED-blink#create-a-new-vivado-project) and use *analog_echo* as the new project name. 
 
 ### Import the Redpitaya-125-14 IP library
 After creating a new project, we have to add the IP repository that has been created to simplify the use of analog frontends of the Redpitaya-125-14:
