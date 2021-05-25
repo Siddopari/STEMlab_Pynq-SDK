@@ -124,7 +124,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
      * **Implementation**: places the logical elements of the synthesized design into the particular chip architecture.
      * **Bitstream generation**: creates a binary image that contains the implemented design.
 
-* After a few minutes, the process completes. Press *Cancel* to close the the pop-up window.
+* After a few minutes, the process completes. Press *Cancel* to close the pop-up window.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/bitstreamCompleted.PNG" width="200"/>
 
 ## Running the design
