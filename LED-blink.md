@@ -34,7 +34,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Leave the _Add Sources_ screen empty and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSources.PNG" width="450"/>
 
-* Use *Add File* to include the constraints file within *[FPGA-Notes-for-Scientists/sdc/redpitaya-125-14.xdc](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sdc/redpitaya-125-14.xdc)* and hit _Next_.
+* Use *Add File* to include the constraints file within [FPGA-Notes-for-Scientists/sdc/redpitaya-125-14.xdc](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sdc/redpitaya-125-14.xdc) and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addConstraints.PNG" width="450"/>
 
 * Under the *Boards* tab select Redpitaya-125-14 (see [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#Install-the-Redpitaya-125-14-board-files) for instructions to install the Redpitaya-125-14 board files) and hit *Next*.
@@ -71,7 +71,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 ### Create an HDL counter
 ***
 
-:information_source: A ready-to-use HDL counter is available under [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
+:information_source: A ready-to-use HDL counter is available under [FPGA-Notes-for-Scientists/hdl/counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
 
 ***
 * The next step is to create a counter logic with variable counter increment. Click on *Add Sources* (left panel) and select *Add or create design sources*.
@@ -86,7 +86,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * The new source file (*counter.vhd*) will be added to the project source tree. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="1000"/>
 
-* Edit *counter.vhd* to include the counter logic (see [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) for a working example).
+* Edit *counter.vhd* to include the counter logic (see [FPGA-Notes-for-Scientists/hdl/counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) for a working example).
 
 * Add the HDL counter module to your design. To this end, right-click on the design and select *Add Module*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addModule.PNG" width="220"/>
@@ -125,7 +125,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
      * **Bitstream generation**: creates a binary image that contains the implemented design.
 
 * After a few minutes, the process completes. Press *Cancel* to close the pop-up window.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/bitstreamCompleted.PNG" width="200"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/bitstreamCompleted.PNG" width="250"/>
 
 ## Running the design
 ***
@@ -147,7 +147,7 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
 
 * Create a new Python 3 Jupyter Notebook.
 
-* Open the Jupyter Notebook and edit it as shown in *[FPGA-Notes-for-Scientists/jupyter_notebooks/LED_blink.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/LED_blink.ipynb)*. 
+* Open the Jupyter Notebook and edit it as shown in [FPGA-Notes-for-Scientists/jupyter_notebooks/LED_blink.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/LED_blink.ipynb). 
 
 * Run the Jupyter notebook. 
 
