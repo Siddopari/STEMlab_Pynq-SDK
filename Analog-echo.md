@@ -7,10 +7,24 @@
 
 * Use a simple AXI stream module. 
 
+
 **Description:** 
 
 In this tutorial we are going to build a simple analog echo design, where the analog inputs IN1 and IN2 are forwarded to the analog outputs OUT1 and OUT2, respectively. In between, we add an offset control module, which is configured through PYNQ.
 
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/scope.png" width="800"/>
+
+| Channel | Description |
+|---|---|
+| 1 (yellow) | IN1 |
+| 2 (green) | IN2 |
+| 3 (blue) | OUT1 = IN1 + 0.25V|
+| 4 (red) | OUT2 = IN2 - 0.10V|
+
+
+
+
+ 
 ## Building the Vivado Design
 ### Create a new Vivado Project
 Follow the steps in [LED blink](../LED-blink#create-a-new-vivado-project) and use *analog_echo* as the new project name. 
