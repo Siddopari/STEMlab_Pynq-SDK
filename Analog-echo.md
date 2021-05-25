@@ -31,7 +31,7 @@ After creating a new project, we have to add the IP repository that has been cre
     * AXI GPIO
     * **Redpitaya-125-14-clk**
     * **Redpitaya-125-14-adc** (the 14-bit ADC samples are MSB aligned within the outgoing 16-bit AXI stream interfaces)
-    * Redpitaya-125-14-dac (the 14-bit DAC samples are extracted from the MSB of the incoming 16-bit AXI stream interfaces)
+    * **Redpitaya-125-14-dac** (the 14-bit DAC samples are extracted from the MSB of the incoming 16-bit AXI stream interfaces)
 
 
 * Connect the clocks and resets as shown in the diagram below. 
