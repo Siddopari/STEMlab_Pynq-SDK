@@ -33,7 +33,7 @@ Follow the steps in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Sci
 After creating a new project, we have to add the IP repository that has been created to simplify the use of analog frontends of the Redpitaya-125-14:
 * Go to the left panel click on *Project Manager --> Settings*. 
 * Navigate to *IP --> Repository*.
-* Add the repository [\<FPGA-Notes-for-Scientists\>/ip](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/ip).
+* Add the repository *[FPGA-Notes-for-Scientists/ip](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/ip)*.
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/add_ip.PNG" width="450"/>
 
@@ -64,7 +64,7 @@ After creating a new project, we have to add the IP repository that has been cre
 ***
 
 * Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
-* We omit the creation of a HDL file, which was explained in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-hdl-counter), and directly import [<FPGA-Notes-for-Scientists\>/hdl/offset_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/offset_ctrl.vhd).
+* We omit the creation of a HDL file, which was explained in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-hdl-counter), and directly import *[FPGA-Notes-for-Scientists/hdl/offset_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/offset_ctrl.vhd)*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/add_offset_ctrl.PNG" width="450"/>
 
 * Add the HDL offset_ctrl module to your design (right-click on the design and select *Add Module*) and draw the required connections within your design.
@@ -110,7 +110,7 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/analog_echo
 
 * Create a new Python 3 Jupyter Notebook.
 
-* Open the Jupyter Notebook and edit it as shown in [analog_echo.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/analog_echo.ipynb). 
+* Open the Jupyter Notebook and edit it as shown in *[FPGA-Notes-for-Scientists/jupyter_notebooks/analog_echo.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/analog_echo.ipynb)*. 
 
 * Run the Jupyter notebook. 
 
