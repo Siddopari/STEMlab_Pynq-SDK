@@ -14,7 +14,7 @@ In this tutorial we are going to build a simple analog echo design, where the an
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/scope.png" width="800"/>
 
-| Channel | Description |
+| Oscilloscope Channel | Description |
 |---|---|
 | 1 (yellow) | IN1 |
 | 2 (green) | IN2 |
