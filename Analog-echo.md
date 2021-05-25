@@ -5,7 +5,7 @@
 
 * Interface the 125 MSa/s ADCs and DACs of the Redpitaya-125-14.
 
-* Build a simple AXI stream module. 
+* Use a simple AXI stream module. 
 
 **Description:** 
 
