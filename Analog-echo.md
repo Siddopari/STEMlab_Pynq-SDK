@@ -12,7 +12,7 @@
 
 In this tutorial we are going to build a simple analog echo design, where the analog inputs IN1 and IN2 are forwarded to the analog outputs OUT1 and OUT2, respectively. In between, we add an offset control module, which is configured through PYNQ.
 
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/scope.png" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/scope.png" width="1000"/>
 
 | Oscilloscope Channel | Description |
 |---|---|
