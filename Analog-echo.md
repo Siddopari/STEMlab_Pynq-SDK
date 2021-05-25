@@ -27,7 +27,7 @@ In this tutorial we are going to build a simple analog echo design, where the an
  
 ## Building the Vivado Design
 ### Create a new Vivado Project
-Follow the steps in [LED blink](../LED-blink#create-a-new-vivado-project) and use *analog_echo* as the new project name. 
+Follow the steps in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-new-vivado-project) and use *analog_echo* as the new project name. 
 
 ### Import the Redpitaya-125-14 IP library
 After creating a new project, we have to add the IP repository that has been created to simplify the use of analog frontends of the Redpitaya-125-14:
@@ -64,7 +64,7 @@ After creating a new project, we have to add the IP repository that has been cre
 ***
 
 * Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
-* We omit the creation of a HDL file, which was explained in [LED blink](../LED-blink#create-a-hdl-counter), and directly import *\<FPGA-Notes-for-Scientists\>/hdl/offset_ctrl.vhd*.
+* We omit the creation of a HDL file, which was explained in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-hdl-counter), and directly import *\<FPGA-Notes-for-Scientists\>/hdl/offset_ctrl.vhd*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/add_offset_ctrl.PNG" width="450"/>
 
 * Add the HDL offset_ctrl module to your design (right-click on the design and select *Add Module*) and draw the required connections within your design.
@@ -88,7 +88,7 @@ After creating a new project, we have to add the IP repository that has been cre
 
 
 ### Bitstream generation
-Please follow the steps detailed in [LED blink](../LED-blink#bitstream-generation).
+Please follow the steps detailed in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#bitstream-generation).
 
 ## Running the design
 ***
@@ -103,7 +103,7 @@ ping <static-ip-address>
 * Create and upload the *overlay* for your custom design by pressing the <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="15"/> button. The following message should appear within your Vivado Tcl console:
 ```bash
 Overlay "analog_echo" successfully uploaded to: 
-xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
+xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/analog_echo
 ```
 
 * Open your preferred web browser and navigate to *\<static-ip-address\>* and enter the PYNQ Jupyter Notebook environment (password: *Xilinx*).
