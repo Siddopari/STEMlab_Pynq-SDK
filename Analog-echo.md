@@ -9,12 +9,9 @@
 
 **Description:** 
 
-In this tutorial we are going to build a simple analog echo design, where the analog inputs IN1 and IN2 are forwarded to the analog outputs OUT1 and OUT2, respectively. In between, we add an offset control module, which is configured through a PYNQ Jupyter Notebook.
+In this tutorial we are going to build a simple analog echo design, where the analog inputs IN1 and IN2 are forwarded to the analog outputs OUT1 and OUT2, respectively. In between, we add an offset control module, which is configured through PYNQ.
 
 ## Building the Vivado Design
-### Create a new Vivado Project
-Follow the steps in [LED blink](../LED-blink#create-a-new-vivado-project) and name it *analog_echo*. 
-
 ### Create a new Vivado Project
 Follow the steps in [LED blink](../LED-blink#create-a-new-vivado-project) and name it *analog_echo*. 
 
@@ -53,7 +50,7 @@ After creating a new project, we have to add the IP repository that has been cre
 ***
 
 * Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
-* We omit the creation of a HDL file, which was explained in [LED blink](../LED-blink#create-a-hdl-counter) and directly import *\<FPGA-Notes-for-Scientists\>/hdl/offset_ctrl.vhd*.
+* We omit the creation of a HDL file, which was explained in [LED blink](../LED-blink#create-a-hdl-counter), and directly import *\<FPGA-Notes-for-Scientists\>/hdl/offset_ctrl.vhd*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/add_offset_ctrl.PNG" width="450"/>
 
 * Add the HDL offset_ctrl module to your design (right-click on the design and select *Add Module*) and draw the required connections within your design.
@@ -72,29 +69,12 @@ After creating a new project, we have to add the IP repository that has been cre
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/all_ports.PNG" width="1000"/>
 
 ### Block and connection automation.
-* Use the *Block Automation* and *Connection Automation* (green field above your design) to route the DDR and FIXED_IO ports and to connect the AXI GPIO instances. 
+* Use the *Block Automation* and *Connection Automation* (green field above your design) to route the DDR and FIXED_IO ports and to interconnect the AXI GPIO and ZYNQ instances. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/final_design.PNG" width="1000"/>
 
 
 ### Bitstream generation
 Please follow the steps detailed in [LED blink](../LED-blink#bitstream-generation).
-
-## Running the design
-***
-:information_source: Please make sure to complete first the steps in [Prepare your Redpitaya-125-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#prepare-your-redpitaya-125-14) and [Speed up the design flow](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#speed-up-the-design-flow).
-***
-
-* Before bitstream generation, a HDL wrapper around the design needs to be created. Within your project source tree, right-click on top of your design  and select *Create HDL Wrapper* (use default settings).
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/hdl_wrapper.png" width="1000"/>
-
-
-* Click on *Generate Bitstream* (left panel) and proceed with the default settings. This will automatically take you through:
-     * **Synthesis**: translates the custom design FPGA design into logical elements such as flip-flops, LUTs...
-     * **Implementation**: places the logical elements of the synthesized design into the particular chip architecture.
-     * **Bitstream generation**: creates a binary image that contains the implemented design.
-
-* After a few minutes, the process completes. Press *Cancel* to close the the pop-up window.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/bitstreamCompleted.PNG" width="200"/>
 
 ## Running the design
 ***
