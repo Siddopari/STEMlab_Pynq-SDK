@@ -1,5 +1,5 @@
 ## About this tutorial 
-:stopwatch: 20 min
+:stopwatch: 30 min
 
 **Key learnings:**
 
@@ -76,7 +76,47 @@ After creating a new project, we have to add the IP repository that has been cre
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/final_design.PNG" width="1000"/>
 
 
+### Bitstream generation
+Please follow the steps detailed in [LED blink](../LED-blink#bitstream-generation).
+
+## Running the design
+***
+:information_source: Please make sure to complete first the steps in [Prepare your Redpitaya-125-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#prepare-your-redpitaya-125-14) and [Speed up the design flow](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#speed-up-the-design-flow).
+***
+
+* Before bitstream generation, a HDL wrapper around the design needs to be created. Within your project source tree, right-click on top of your design  and select *Create HDL Wrapper* (use default settings).
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/hdl_wrapper.png" width="1000"/>
 
 
- 
+* Click on *Generate Bitstream* (left panel) and proceed with the default settings. This will automatically take you through:
+     * **Synthesis**: translates the custom design FPGA design into logical elements such as flip-flops, LUTs...
+     * **Implementation**: places the logical elements of the synthesized design into the particular chip architecture.
+     * **Bitstream generation**: creates a binary image that contains the implemented design.
+
+* After a few minutes, the process completes. Press *Cancel* to close the the pop-up window.
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/bitstreamCompleted.PNG" width="200"/>
+
+## Running the design
+***
+:information_source: Please make sure to complete first the steps in [Prepare your Redpitaya-125-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#prepare-your-redpitaya-125-14) and [Speed up the design flow](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#speed-up-the-design-flow).
+***
+
+* Verify that you Redpitaya-125-14 is connected to your local network, e.g. using ping:
+```bash
+ping <static-ip-address>
+```
+
+* Create and upload the *overlay* for your custom design by pressing the <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="15"/> button. The following message should appear within your Vivado Tcl console:
+```bash
+Overlay "analog_echo" successfully uploaded to: 
+xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
+```
+
+* Open your preferred web browser and navigate to *\<static-ip-address\>* and enter the PYNQ Jupyter Notebook environment (password: *Xilinx*).
+
+* Create a new Python 3 Jupyter Notebook.
+
+* Open the Jupyter Notebook and edit it as shown in [analog_echo.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/analog_echo.ipynb). 
+
+* Run the Jupyter notebook. 
 
