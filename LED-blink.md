@@ -68,7 +68,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Double-click on the ZYNQ instance and verify (under *Clock Configuration --> PL Fabric Clocks*) that *FCLK_CLK0* is enabled and set to 50 MHz. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqPLClk.PNG" width="450"/>
 
-### Create a HDL counter
+### Create an HDL counter
 ***
 
 :information_source: A ready-to-use HDL counter is available under [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
