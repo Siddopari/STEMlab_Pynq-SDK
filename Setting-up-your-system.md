@@ -15,7 +15,7 @@ git clone https://github.com/dspsandbox/FPGA-Notes-for-Scientists
 
 ###  Install the Redpitaya-125-14 board files
 To be able to generate your custom FPGA designs, it is recommended to use a board files that pre-configures your Vivado design environment. To date, no official board files for the Redpitaya-125-14 exist. For this reason, I created a custom board file that includes the most important settings of the Redpitaya-125-14. To install them, you have to:
-* Navigate to *\<FPGA-Notes-for-Scientists\>/board_files* and copy the *redpitaya-125-14* folder.
+* Navigate to [FPGA-Notes-for-Scientists/board_files](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/board_files) and copy the *redpitaya-125-14* folder.
 * Navigate to *\<Vivado-Install-Path\>/data/boards/board_files* and paste the *redpitaya-125-14* folder. 
 
 ## Prepare your Redpitaya-125-14
@@ -99,7 +99,7 @@ Overlays are file bundles created around a custom FPGA image, which include the 
 
 * Close Vivado.
 
-* Open *\<FPGA-Notes-for-Scientists\>/tcl/upload_overlay.tcl* and insert the static IP address of your Redpitaya-125-14:
+* Open [FPGA-Notes-for-Scientists/tcl/upload_overlay.tcl](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/tcl/upload_overlay.tcl) and insert the static IP address of your Redpitaya-125-14:
 
 ```tcl
 #############################
