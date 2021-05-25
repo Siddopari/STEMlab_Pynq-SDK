@@ -34,7 +34,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Leave the _Add Sources_ screen empty and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSources.PNG" width="450"/>
 
-* Use *Add File* to include the constraints file within *\<FPGA-Notes-for-Scientists\>/sdc/redpitaya-125-14.xdc* and hit _Next_.
+* Use *Add File* to include the constraints file within *[FPGA-Notes-for-Scientists/sdc/redpitaya-125-14.xdc](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sdc/redpitaya-125-14.xdc)* and hit _Next_.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addConstraints.PNG" width="450"/>
 
 * Under the *Boards* tab select Redpitaya-125-14 (see [here](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#Install-the-Redpitaya-125-14-board-files) for instructions to install the Redpitaya-125-14 board files) and hit *Next*.
@@ -147,7 +147,7 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
 
 * Create a new Python 3 Jupyter Notebook.
 
-* Open the Jupyter Notebook and edit it as shown in [LED_blink.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/LED_blink.ipynb). 
+* Open the Jupyter Notebook and edit it as shown in *[FPGA-Notes-for-Scientists/jupyter_notebooks/LED_blink.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/LED_blink.ipynb)*. 
 
 * Run the Jupyter notebook. 
 
