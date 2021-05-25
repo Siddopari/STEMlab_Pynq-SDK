@@ -41,17 +41,17 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/defaultPart.PNG" width="450"/>
 
 * After finishing this initial configurations, a new Vivado Project is created. You will see the *Project Manager* page:
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/projectSummary.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/projectSummary.PNG" width="1000"/>
 
 ### Create a new Block Design
 
 * Create a new block design by clicking on *Create Block Design* (left panel). The design name will default to *design_1*.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createBlockDesign.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createBlockDesign.PNG" width="1000"/>
 
 * Right-click on the blank design and select *Add IP* to instantiate:
     * ZYNQ 7 Processing System
     * AXI GPIO (we will use this IP to write from PS to PL)
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqGpio_1.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqGpio_1.PNG" width="1000"/>
 
 * Click on *Run Block Automation* (green field above your design) to route the DDR and FIXED_IO ports of the ZYNQ instance. To this end, leave the configuration window in its default state.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/blockAutomation.PNG" width="450"/>
@@ -60,7 +60,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/connectionAutomation.PNG" width="450"/>
 
 * After running block & connection automation, the design becomes:
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqGpio_2.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/zynqGpio_2.PNG" width="1000"/>
 
 * Double-click on the AXI GPIO instance and enable Channel 1 and Channel 2 as outputs of 1 and 32 bits, respectively. Later in the design process, we will use Channel 1 to reset the counter logic and Channel 2 to define the counter increment value. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/axiGpio.PNG" width="450"/>
@@ -84,7 +84,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/defineModule.PNG" width="350"/>
 
 * The new source file (*counter.vhd*) will be added to the project source tree. 
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="1000"/>
 
 * Edit *counter.vhd* to include the counter logic (see [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) for a working example).
 
@@ -95,7 +95,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 
 ### Constraints and signal routing
 * Open the constraints file (*redpitaya-125-14.xdc*) and uncomment lines 166-177, which define and configure the FPGA ports connected to the LEDs.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/ledSdc.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/ledSdc.PNG" width="1000"/>
 
 * Return to your design, right-click and select *Create Port*. Name the port *led_o* and configure it as shown below:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/createPort.PNG" width="300"/>
@@ -111,12 +111,12 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/concat.PNG" width="450"/>
 
 * Wire up the AXI GPIO, HDL counter, Slice IP, Concat IP and *led_o* port as shown below:
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/fullDesign.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/fullDesign.PNG" width="1000"/>
 
 ### Bitstream generation
 
 * Before bitstream generation, a HDL wrapper around the design needs to be created. Within your project source tree, right-click on top of your design  and select *Create HDL Wrapper* (use default settings).
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/hdlWrapper.PNG" width="800"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/hdlWrapper.PNG" width="1000"/>
 
 
 * Click on *Generate Bitstream* (left panel) and proceed with the default settings. This will automatically take you through:
