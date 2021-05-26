@@ -20,4 +20,18 @@ In this tutorial we are going to build a dual channel data acquisition and gener
 Follow the steps in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-new-vivado-project) and use *DMA_transfer* as the new project name. 
 
 ### Import the Redpitaya-125-14 IP library
-Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Analog-echo#import-the-redpitaya-125-14-ip-library)
+Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Analog-echo#import-the-redpitaya-125-14-ip-library).
+
+### Block Design
+* Create a new block design.
+* Create an instance of the following IPs:
+    * ZYNQ7 Processing System
+    * Processor System Reset
+    * AXI GPIO
+    * AXI Interconnect (x2)
+    * AXI Direct Memory Access (x2)
+    * Redpitaya-125-14-clk
+    * Redpitaya-125-14-adc
+    * Redpitaya-125-14-dac
+* Double click on the ZYNQ7 instance and go to *HP Slave AXI Interface* and enable *S AXI HP0 interface* and *S AXI HP1 interface* (data width 64 bit)
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/zynq.PNG" width="450"/>
