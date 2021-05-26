@@ -36,7 +36,98 @@ Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-S
 * Double click on the ZYNQ7 instance and go to *HP Slave AXI Interface* and enable the high performance interfaces *S AXI HP0 interface* and *S AXI HP1 interface* (data width 64 bit).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/zynq.PNG" width="600"/>
 
-* (x2) Double click on the AXI Interconnect instance and configure it to have 2 Slave Interfaces and 1 Master Interface
+* Double click on the GPIO instance and configure both ports as outputs of 1 and 32 bits. 
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/gpio.PNG" width="600"/>
+
+
+* (x2) Double click on the AXI Interconnect instance and configure it to have 2 Slave Interfaces and 1 Master Interface.
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/axi_interconnect.PNG" width="600"/>
+
+* (x2) Double click on the AXI Direct Memory Access instance and configure it as shown below:
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/axi_dma.PNG" width="600"/>
+
+* Connect the clocks and resets. 
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/clk.PNG" width="1000"/>
+
+### AXI stream control module
+
+We need a simple HDl module that controls the controls the data streams going into / out of the DMA engines. The main functionality is:
+* Hold the incoming/outgoing data streams until a trigger signal is received.
+* Rise the AXI stream *tlast* line, when the last data sample gets acquired.
+
+To include a stream control module please follow the steps below:
+* Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
+* Import [FPGA-Notes-for-Scientists/hdl/stream_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_ctrl.vhd).
+* (x4) Add the stream control module to your design (right-click on the design and select *Add Module*) and draw the required connections.
+   * *stream_i* / *stream_o* -->  as highlighted in diagram below.
+   * *clk* / *resetn* -->  similar to the already instantiated logic, they are connected to *clk_125* and *peripheral_aresetn*.
+   * *trig* --> AXI GPIO Channel 1.
+   * *samples* --> AXI GPIO Channel 2.
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/stream_ctrl.PNG" width="1000"/>
+
+
+
+### Connect the MM2S and S2MM interfaces
+* We have to connect the DMA memory-mapped-to-stream (MM2S) and stream-to-memory-mapped (S2MM) to the ZYNQ HP ports via AXI Interconnect instances. To this end, draw the following connections:
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/MM2S_S2MM.PNG" width="1000"/>
+
+### Constraints and port creation
+* Edit the constraints in *redpitaya-125-14.xdc* and uncomment the sections:
+  * ADC (lines 8-56)
+  * DAC (lines 59-90)
+  * Clock constraints (lines 180-183)
+
+* Go back to your design and create the required input/output ports for the *Redpitaya-125-14-clk*, *Redpitaya-125-14-adc* and *Redpitaya-125-14-dac* IPs. The fastest way is to right-click on a every port and choose *Create Port*  (*CTRL + K*) and proceed with the default settings. 
+
+* Including all the required ports, the design becomes:
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/all_ports.PNG" width="1000"/>
+
+### Block and connection automation.
+* Use the *Block Automation* (green field above your design) to route the DDR and FIXED_IO ports. It is important to **uncheck the *Apply Board Board Preset* **, otherwise we will have to enable again the HP ports.
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/block_automation.PNG" width="600"/>
+
+
+* Run *Connection Automation* (green field above your design) to interconnect the AXI GPIO and ZYNQ instances. 
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/connection_automation.PNG" width="600"/>
+
+* The final design becomes
+
+### Address Editor
+* Open the Address Editor and automatically assign an address space to all interfaces (right-click on on *Network 0* and select *Assign All*)
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/assign_address.PNG" width="100"/>
+
+
+### Bitstream generation
+Please follow the steps detailed in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#bitstream-generation).
+
+
+## Running the design
+***
+:information_source: Please make sure to complete first the steps in [Prepare your Redpitaya-125-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#prepare-your-redpitaya-125-14) and [Speed up the design flow](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Setting-up-your-system#speed-up-the-design-flow).
+***
+
+* Verify that you Redpitaya-125-14 is connected to your local network, e.g. using ping:
+```bash
+ping <static-ip-address>
+```
+
+* Create and upload the *overlay* for your custom design by pressing the <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/tclButton.png" width="15"/> button. The following message should appear within your Vivado Tcl console:
+```bash
+Overlay "DMA_transfer" successfully uploaded to: 
+xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/DMA_transfer
+```
+
+* Open your preferred web browser and navigate to *\<static-ip-address\>* and enter the PYNQ Jupyter Notebook environment (password: *Xilinx*).
+
+* Create a new Python 3 Jupyter Notebook.
+
+* Open the Jupyter Notebook and edit it as shown in [FPGA-Notes-for-Scientists/jupyter_notebooks/DMA_transfer.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/DMA_transfer.ipynb). 
+
+* Use a pair of SMB cables to connect OUT1 --> IN1 and OUT2 --> IN2.
+
+* Run the Jupyter notebook. 
+
+ 
 
