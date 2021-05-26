@@ -1,5 +1,5 @@
 ## About this tutorial
-:stopwatch: 45 min
+:stopwatch: 60 min
 
 **Key learnings:**
 
@@ -93,10 +93,11 @@ To include a stream control module please follow the steps below:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/connection_automation.PNG" width="600"/>
 
 * The final design becomes
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/final_design.PNG" width="1000"/>
 
 ### Address Editor
 * Open the Address Editor and automatically assign an address space to all interfaces (right-click on on *Network 0* and select *Assign All*)
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/assign_address.PNG" width="100"/>
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/assign_address.PNG" width="1000"/>
 
 
 ### Bitstream generation
