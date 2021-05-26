@@ -67,7 +67,7 @@ After creating a new project, we have to add the IP repository that has been cre
 * We omit the creation of a HDL file, which was explained in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-hdl-counter), and directly import [FPGA-Notes-for-Scientists/hdl/offset_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/offset_ctrl.vhd).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/add_offset_ctrl.PNG" width="450"/>
 
-* Add the HDL offset_ctrl module to your design (right-click on the design and select *Add Module*) and draw the required connections within your design.
+* Add the HDL offset contrl module to your design (right-click on the design and select *Add Module*) and draw the required connections within your design.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/offset_ctrl.PNG" width="1000"/>
 
 
