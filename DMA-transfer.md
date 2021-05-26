@@ -33,5 +33,10 @@ Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-S
     * Redpitaya-125-14-clk
     * Redpitaya-125-14-adc
     * Redpitaya-125-14-dac
-* Double click on the ZYNQ7 instance and go to *HP Slave AXI Interface* and enable *S AXI HP0 interface* and *S AXI HP1 interface* (data width 64 bit)
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/zynq.PNG" width="450"/>
+* Double click on the ZYNQ7 instance and go to *HP Slave AXI Interface* and enable the high performance interfaces *S AXI HP0 interface* and *S AXI HP1 interface* (data width 64 bit).
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/zynq.PNG" width="600"/>
+
+* (x2) Double click on the AXI Interconnect instance and configure it to have 2 Slave Interfaces and 1 Master Interface
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/axi_interconnect.PNG" width="600"/>
+
