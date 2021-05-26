@@ -95,11 +95,11 @@ To include a stream control module please follow the steps below:
 * Run *Connection Automation* (green field above your design) to interconnect the AXI GPIO and ZYNQ instances. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/connection_automation.PNG" width="600"/>
 
-* The final design becomes
+* The final design becomes:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/final_design.PNG" width="1000"/>
 
 ### Address Editor
-* Open the Address Editor and automatically assign an address space to all interfaces (right-click on on *Network 0* and select *Assign All*)
+* Open the Address Editor and automatically assign an address space to all interfaces (right-click on on *Network 0* and select *Assign All*).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/assign_address.PNG" width="1000"/>
 
 
