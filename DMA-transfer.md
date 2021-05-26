@@ -3,7 +3,7 @@
 
 **Key learnings:**
 
-* Long custom waveform generation generation/acquisition.
+* Long custom waveform generation/acquisition.
 
 * PL (Programable Logic): use AXI DMA IP for reading/writing data from/to RAM memory.
 
