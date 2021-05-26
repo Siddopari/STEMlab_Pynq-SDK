@@ -75,7 +75,7 @@ After creating a new project, we have to add the IP repository that has been cre
 * Edit the constraints in *redpitaya-125-14.xdc* and uncomment the sections:
   * ADC (lines 8-56)
   * DAC (lines 59-90)
-  * Clock constraints (lines 181-183)
+  * Clock constraints (lines 180-183)
 * Go back to your design and create the required input/output ports for the *Redpitaya-125-14-clk*, *Redpitaya-125-14-adc* and *Redpitaya-125-14-dac* IPs. The fastest way is to right-click on a every port and choose *Create Port*  (*CTRL + K*) and proceed with the default settings. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/create_port.png" width="1000"/>
 
