@@ -36,7 +36,7 @@ Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-S
     * Redpitaya-125-14-clk
     * Redpitaya-125-14-adc
     * Redpitaya-125-14-dac
-* Double click on the ZYNQ7 instance and go to *HP Slave AXI Interface* and enable the high performance interfaces *S AXI HP0 interface* and *S AXI HP1 interface* (data width 64 bit).
+* Double click on the ZYNQ7 instance and go to *PS-PL Configuration --> HP Slave AXI Interface* and enable the high performance interfaces 0 and 1 (data width 64 bit).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/zynq.PNG" width="600"/>
 
 * Double click on the GPIO instance and configure both ports as outputs of 1 and 32 bits. 
