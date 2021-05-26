@@ -57,7 +57,7 @@ Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-S
 
 We need a simple HDl module that controls the controls the data streams going into / out of the DMA engines. The main functionality is:
 * Hold the incoming/outgoing data streams until a trigger signal is received.
-* Rise the AXI stream *tlast* line, when the last data sample gets acquired.
+* Rise the AXI stream *tlast* line when the last data sample gets acquired.
 
 To include a stream control module please follow the steps below:
 * Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
@@ -88,7 +88,7 @@ To include a stream control module please follow the steps below:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/all_ports.PNG" width="1000"/>
 
 ### Block and connection automation.
-* Use the *Block Automation* (green field above your design) to route the DDR and FIXED_IO ports. It is important to **uncheck the *Apply Board Board Preset* **, otherwise we will have to enable again the HP ports.
+* Use the *Block Automation* (green field above your design) to route the DDR and FIXED_IO ports. It is important to **uncheck the *Apply Board Board Preset* option**, otherwise we will have to enable again the HP ports.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/block_automation.PNG" width="600"/>
 
 
