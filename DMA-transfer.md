@@ -3,7 +3,7 @@
 
 **Key learnings:**
 
-* Long custom waveform generation/acquisition (up to ~30,000,000 16-bit samples).
+* Long custom waveform generation/acquisition (up to ~30 000 000 16-bit samples).
 
 * PL (Programable Logic): use AXI DMA IP for reading/writing data from/to RAM memory.
 
