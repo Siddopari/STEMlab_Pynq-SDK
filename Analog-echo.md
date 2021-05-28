@@ -50,7 +50,7 @@ After creating a new project, we have to add the IP repository that has been cre
 
 * Connect the clocks and resets as shown in the diagram below. 
    * We use *clk_125*, which operates at 125MHz, to drive the main logic of the design. All data paths in this tutorial will be synchronous to this clock. 
-   * We connect *clk_250_m150* and *clk_250_m120* to the DAC only. They operate at 250Mhz and are phase locked to *clk_125* with a relative phase shift of -150 deg and -120 deg.  
+   * We connect *clk_250* and *clk_250_m45* to the DAC only. They operate at 250Mhz and are phase locked to *clk_125* with a relative phase shift of 0 deg and -45 deg, respectively. 
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/connect_clk.PNG" width="1000"/>
 
