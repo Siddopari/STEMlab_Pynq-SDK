@@ -36,6 +36,10 @@ Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-S
     * Redpitaya-125-14-clk
     * Redpitaya-125-14-adc
     * Redpitaya-125-14-dac
+
+* Use the *Block Automation* (green field above your design) to route the DDR and FIXED_IO ports. 
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/block_automation.PNG" width="600"/>
+
 * Double click on the ZYNQ7 instance and go to *PS-PL Configuration --> HP Slave AXI Interface* and enable the high performance interfaces *HP0* and *HP1* (data width 64 bit).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/zynq.PNG" width="600"/>
 
@@ -87,12 +91,9 @@ To include a stream control module please follow the steps below:
 * Including all the required ports, the design becomes:
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/all_ports.PNG" width="1000"/>
 
-### Block and connection automation.
-* Use the *Block Automation* (green field above your design) to route the DDR and FIXED_IO ports. It is important to **uncheck the *Apply Board Board Preset* option**, otherwise we will have to enable again the HP ports.
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/block_automation.PNG" width="600"/>
+### Connect memory mapped interfaces
 
-
-* Run *Connection Automation* (green field above your design) to interconnect the AXI GPIO and ZYNQ instances. 
+* Run *Connection Automation* (green field above your design) to interconnect the AXI GPIO, DMA and ZYNQ instances. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/connection_automation.PNG" width="600"/>
 
 * The final design becomes:
