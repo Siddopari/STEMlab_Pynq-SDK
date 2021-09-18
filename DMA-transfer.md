@@ -13,7 +13,7 @@
 
 FPGAs have typically very low on-chip memory resources (~250kB for the ZYNQ-7010 of your Redpitaya-125-14). This limitation can be circumvented through one or multiple external DDR memories which are connected to the FPGA through high bandwidth ports and controlled through a Direct Memory Access (DMA) engine. The Redpitaya-125-14 includes a 512MB DDR memory, which serves as RAM for the Zynq PS but can also be used to exchange data with the Zynq PL. 
 
-In this tutorial we are going to build a dual channel data acquisition and generation design, where the samples are directly read form (written to) RAM memory via DMA. A PYNQ Jupyter Notebook will be used to preload waveforms to RAM memory, simultaneously trigger the waveform generation/acquisition and plot the acquired samples.
+In this tutorial we are going to build a dual channel data generation and acquisition design, where the samples are directly read from and written to RAM memory via DMA. A PYNQ Jupyter Notebook will be used to preload waveforms to RAM memory, simultaneously trigger the waveform generation/acquisition and plot the acquired samples.
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/DMA-transfer/acq.png" width="1000"/>
 
