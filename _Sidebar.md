@@ -6,3 +6,4 @@
    * [LED blink](LED-blink)
    * [Analog echo](Analog-echo)
    * [DMA transfer](DMA-transfer)
+   * [Behavioral simulation](Behavioral-simulation)
