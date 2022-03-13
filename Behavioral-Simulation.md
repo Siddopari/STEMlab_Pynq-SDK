@@ -5,8 +5,7 @@
 
 * Simulate a custom logic using Vivado Xsim
 
-* Use RTL testbench for stimulus generation
-
+* Use RTL testbench 
 * Use TCL script for stimulus for stimulus generation
 
 **Description**:
@@ -18,7 +17,7 @@ In this case we are not going to create a new design, instead we are going to si
 
 ## Vivado Simulator
 The Vivado toolchain allows you to simulate your logic at different points of the build process:
- * **Behavioural simulation**: *ideal* simulation, only based on the provided RTL (Verilog, VHDL...) code.
+ * **Behavioral simulation**: *ideal* simulation, only based on the provided RTL (Verilog, VHDL...) code.
  * **Post-synthesis simulation**: simulation of the RTL code when converted to actual FPGA logic building blocks (Flip-Flops, LUTs...). 
  * **Post-implementation simulation**: simulation of the RTL code when converted to actual FPGA logic building blocks and placed within the specified FPGA chip. 
 
@@ -37,12 +36,10 @@ Since we only want to simulate the [counter.vhd](https://github.com/dspsandbox/F
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/set_top.png" width="1000"/>
 
+* Start the integrated Vivado behavioural simulator by clicking on *SIMULATION --> Run Simulation --> Run Behavioral Simulation*. 
 
-* Start the integrated Vivado behavioural simulator. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/start_sim_tcl.png" width="1000"/>
 
-* Start the integrated Vivado behavioural simulator by clicking on *SIMULATION --> Run Simulation --> *. 
-<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/start_sim_tcl.png" width="1000"/>
 
 
 
