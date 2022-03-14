@@ -6,9 +6,10 @@
 * [Redpitaya & Zynq architecture](Redpitaya-&-Zynq-architecture)
 * Tutorials:
    * [LED blink](LED-blink)
+   * [Behavioral Simulation](Behavioral-simulation)
    * [Analog echo](Analog-echo)
    * [DMA transfer](DMA-transfer)
-   * [Behavioral Simulation](Behavioral-simulation)
+
 
 
 
