@@ -28,7 +28,37 @@ The following discussion covers two different methods to simulate custom FPGA lo
 1. Creating and executing an RTL testbench 
 2. TCL stimulus. 
 
+|1. RTL testbench |2. TCL stimulus |
+|---|---|
+| :heavy_check_mark: Standard procedure| :x: Vivado Xsim only procedure |
+| :heavy_check_mark: Fast simulation and suited for exhaustive testing| :x:  Slow simulation and suited for simple tests.|
+| :heavy_check_mark: Single programming language (Verilog, VHDL...)| :x: Requires to learn/use TCL scripts |
+| :x: Requires development of testbench that instantiate the RTL to test| :heavy_check_mark: No testbench required  |
+| :x: Slow to write| :heavy_check_mark: Fast and easy to write|
+| :x: Testbench is fixed. Changes require to recompile simulation.| :heavy_check_mark: Simulation is entirely based on runtime TCL commands. Recompilation is not needed.|
+
 ## 1. RTL testbench
+* We first have to create or input an RTL testbench that instantiates the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) module. To this end, click on *PROJECT MANAGER --> Add Sources* (left panel of your Vivado window) and select *Add or create simulation sources*.
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/create_tb_0.PNG" width="450"/>
+
+* Import the [FPGA-Notes-for-Scientists/sim/tb_counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sim/tb_counter.vhd) testbench and click *Finish*.
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/create_tb_1.PNG" width="450"/>
+
+* Select *tb_counter.vhd* as the *Top* simulation file
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/set_top_tb.png" width="1000"/>
+
+
+* Start the integrated Vivado behavioural simulator by clicking on *SIMULATION --> Run Simulation --> Run Behavioral Simulation*. 
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/start_sim_tb.png" width="1000"/>
+
+* Vivado simulator will generate a simulation up to 1us (default setting), where the first 100ns are:
+
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/run_sim_tb.png" width="1000"/>
+
 
 ## 2. TCL stimulus
 
@@ -50,14 +80,6 @@ source <absolute-path-to-FPGA-Notes-for-Scientists>/sim/sim_counter.tcl
 
 
 
-## Simulation comparison
-|RTL testbench |TCL stimulus |
-|---|---|
-| :heavy_check_mark: Standard procedure| :x: Vivado Xsim only procedure |
-| :heavy_check_mark: Fast simulation and suited for exhaustive testing| :x:  Slow simulator and suited for simple tests.|
-| :heavy_check_mark: Single programming language (Verilog, VHDL...)| :x: Requires to learn/use TCL scripts |
-| :x: Requires development of testbench that instantiate the RTL to test| :heavy_check_mark: No testbench required  |
-| :x: Slow to write| :heavy_check_mark: Fast and easy to write|
-| :x: Testbench is fixed. Changes require to recompile simulation.| :heavy_check_mark: Simulation is entirely based on runtime TCL commands. Recompilation is not needed.|
+
 
 
