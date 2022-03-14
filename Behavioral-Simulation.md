@@ -28,11 +28,11 @@ The following discussion covers two different methods to simulate custom FPGA lo
 1. Creating and executing an RTL testbench 
 2. TCL stimulus. 
 
+## 1. RTL testbench
 
-## 1. TCL stimulus
+## 2. TCL stimulus
 
-* Select top simulation file
-Since we only want to simulate the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) module, we have to make sure that it is set as the *Top* simulation file. 
+* Since we only want to simulate the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) module, we have to make sure that it is set as the *Top* simulation file. 
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/set_top.png" width="1000"/>
 
@@ -40,11 +40,13 @@ Since we only want to simulate the [counter.vhd](https://github.com/dspsandbox/F
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/start_sim_tcl.png" width="1000"/>
 
+* Execute the [sim_counter.tcl](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sim/sim_counter.tcl) that is driving your simulation by writing into the TCL console (bottom panel of your Vivado window):
 
+```
+source <absolute-path-to-FPGA-Notes-for-Scientists>/sim/sim_counter.tcl
+```
 
-
-
-
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/run_sim.png" width="1000"/>
 
 
 
