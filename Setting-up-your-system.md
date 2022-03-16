@@ -6,7 +6,7 @@ The system requirements are detailed within the Vivado User Guide UG973. To summ
 * ~ 50GB free storage 
 
 ###  Install Vivado WebPACK
-I recommend to follow the step-by-step instructions within the [Digilent Reference Documentation](https://reference.digilentinc.com/vivado/installing-vivado/start). The most recent versions under which this tutorial has been tested is:
+I recommend to follow the step-by-step instructions within the [Digilent Reference Documentation](https://reference.digilentinc.com/vivado/installing-vivado/start). The most recent version under which this tutorial has been tested is:
  * **Vivado 2020.2** (Windows 10 Professional and Ubuntu 18.04.4 LTS)
 
 ###  Clone this repository
