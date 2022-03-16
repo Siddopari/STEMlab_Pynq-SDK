@@ -1,5 +1,5 @@
 ## FPGA Pendulum Waves (Digital IO)
-We are going to implement a digital version of the beautiful [Pendulum Waves Experiment](https://www.youtube.com/watch?v=yVkdfJ9PkRQ&t=22s&ab_channel=HarvardNaturalSciencesLectureDemonstrations).
+We are going to implement a digital version of the beautiful [Pendulum Waves Experiment](https://www.youtube.com/watch?v=yVkdfJ9PkRQ&t=0s&ab_channel=HarvardNaturalSciencesLectureDemonstrations).
 
 1. Extend the [LED_blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink) example to use 8 independent counters for every LED of your Redpitaya-125-14 with independently controllable counter **incr** but common **resetn**. 
  
