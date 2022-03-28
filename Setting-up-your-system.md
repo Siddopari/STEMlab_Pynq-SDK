@@ -85,7 +85,7 @@ ssh xilinx@<static-ip-address>
 
 ***
 
-:warning: The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section.
+:warning: The *ssh-copy-id* command is not supported within the regular Windows CMD, use instead the **Git Bash Terminal** or the **Linux Subsystem Terminal** for all the steps of this section. Alternatively, you can use the Windows Powershell to set up the RSA key sharing (see [here](https://www.chrisjhart.com/Windows-10-ssh-copy-id/)).
 
 ***
 
