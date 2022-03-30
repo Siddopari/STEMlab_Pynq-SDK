@@ -34,6 +34,7 @@ In this assignment we are going to develop a [Pulse-Width Modulation (PWM)](http
 
 4. Connect the PWM module to the *pwm_o* ports (requires to uncomment *PWM DAC* section in [redpitaya-125-14.xdc](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sdc/redpitaya-125-14.xdc)) and verify on an oscilloscope that the you can use PWM in combination with the integrated low-pass filter to generate an analogue output.
 
+
 ## 3. Axi Stream Waveform Generator (Analog IO)
 The AXI Stream interface is the golden standard for **continuous data flows**. A comprehensive introduction to this interface type can be found [here](https://lauri.xn--vsandi-pxa.com/hdl/zynq/axi-stream.html).
 
