@@ -54,6 +54,8 @@ The most commonly used signals for an AXI stream interface are:
 
 In this assignment we are going to convert the previously used counter and PWM modules and make their outputs AXI4-Stream compliant. You will be able to directly connect them to the DAC of your Redpitaya and create your own saw-tooth and square waveforms.
 
+1. Open the [Analog-Echo](analog-echo) design example
+
 1. Create a new VHDL module based on [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) where the 16 most-significant-bits (MSB) are connected to a *<interface_name>_tdata* output. 
 
 2. Create a *<interface_name>_tvalid* output that is always 1.
