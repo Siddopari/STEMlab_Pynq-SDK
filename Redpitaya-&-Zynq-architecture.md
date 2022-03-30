@@ -34,7 +34,7 @@ The diagram above outlines the basic components of the Redpitaya-125-14 board. A
 
 
 
-(*) *Please refer to the [Redpitaya-125-14 Extension Documentation]( https://redpitaya.readthedocs.io/en/latest/developerGuide/125-14/extent.html) for the exact pinout.* 
+(*) *Please refer to the [Redpitaya-125-14 Extension Documentation]( https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/extent.html) for the exact pinout.* 
 
 
 
