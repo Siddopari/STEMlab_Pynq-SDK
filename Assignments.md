@@ -67,3 +67,14 @@ In this assignment we are going to convert the previously used counter and PWM m
 4. Repeat steps (1)-(3) for the PWM module. Note that you will have to slightly change the output logic, since *pwm_o = 1* and *pwm_o = 0* should be mapped to *<interface_name>_tdata = "01111111111111"* (binary representation of max 16-bit integer) and *<interface_name>_tdata = "1000000000000000"* (binary representation of min 16-bit integer). Once connected to the DAC of your Redpitaya, you should see square waveforms on your oscilloscope.
 
 **HINT** : If you have problems creating your own axis stream saw-tooth module, see [test_waveform.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/test_wave.vhd).
+
+
+## 4. DDS (Analog IO)
+In this assignment we are going to use the [Vivado DDS compiler]/(https://docs.xilinx.com/v/u/en-US/pg141-dds-compiler) to generate configurable sin/cos waveforms.
+
+1. Open the [Analog-Echo](analog-echo) design example.
+
+2. Click on *Add Sources* (left control panel) and import:
+   * [dds_compiler_0.xci](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_compiler_0.xci)
+   * [dds_wrapper.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_wrapper.vhd)
+
