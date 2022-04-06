@@ -116,8 +116,8 @@ set projName [get_property NAME [current_project]]
 
 * Save and close the file.
 
-
-
+## Known Issues
+* Vivado 2020.X does not re-open existing project. See solution [here](https://support.xilinx.com/s/question/0D52E00006hprvBSAQ/vivado-20211-stuck-initializing-language-server?language=en_US)
 
 
 
