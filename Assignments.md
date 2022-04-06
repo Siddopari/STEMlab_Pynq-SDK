@@ -70,7 +70,7 @@ In this assignment we are going to convert the previously used counter and PWM m
 
 
 ## 4. DDS (Analog IO)
-In this assignment we are going to use the [Vivado DDS compiler]/(https://docs.xilinx.com/v/u/en-US/pg141-dds-compiler) to generate configurable sin/cos waveforms.
+In this assignment we are going to use the [Vivado DDS compiler](https://docs.xilinx.com/v/u/en-US/pg141-dds-compiler) to generate configurable sin/cos waveforms.
 
 1. Open the [Analog-Echo](analog-echo) design example.
 
@@ -93,13 +93,19 @@ In this assignment we are going to use the [Vivado DDS compiler]/(https://docs.x
 8. Re-create HDL wrapper, generate bitstream and verify that you can also control the amplitude of the outputs.
 
 9. DDS Multitone generation
+
 9.1. Create 8 separate hierarchies containing:
    * AXI4 Register Bank 
    * DDS wrapper
    * Amplitude control
+   * **Common phase_clr**
+
 9.2. Add the 8 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
+
 9.3 Connect the output of the stream adder cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
+
 9.4 Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 8 frequency tones.
+
 9.5. Configure the frequency and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series] (https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
 
 
