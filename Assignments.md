@@ -75,6 +75,35 @@ In this assignment we are going to use the [Vivado DDS compiler]/(https://docs.x
 1. Open the [Analog-Echo](analog-echo) design example.
 
 2. Click on *Add Sources* (left control panel) and import:
-   * [dds_compiler_0.xci](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_compiler_0.xci)
-   * [dds_wrapper.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_wrapper.vhd)
+   * [FPGA-Notes-for-Scientists/hdl/assignments/dds/dds_compiler_0.xci](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_compiler_0.xci)
+   * [FPGA-Notes-for-Scientists/hdl/assignments/dds/dds_wrapper.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_wrapper.vhd)
+
+3. Remove the connection from ADC to DAC and insert the *dds_wrapper.vhd* with the *cos* and *sin* outputs connected to *dac_data_1* and *dac_data_2*, respectively.
+
+4. Connect the *phase_incr*, *phase_off* and *phase_clr* to the outputs of a configurable  [AXI4 Register Bank](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/tree/main/ip/AXI4-register-bank) (part of the FPGA-Notes-for-Scientists IP library).
+
+5. Create HDL wrapper and generate bitstream.
+
+6. Create a Jupyter notebook to control the DDS:
+   * *frequency = dds_inc / 2^32 * 125 MHz*
+   * *phase = dds_off / 2^32 * 360 degree* 
+
+7. Extend the FPGA design to include [amplitude_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/amplitude_ctrl.vhd) module before between the DDS and the DAC. The amplitude can be set via the AXI4 Register Bank.
+
+8. Re-create HDL wrapper, generate bitstream and verify that you can also control the amplitude of the outputs.
+
+9. DDS Multitone generation
+9.1. Create 8 separate hierarchies containing:
+   * AXI4 Register Bank 
+   * DDS wrapper
+   * Amplitude control
+9.2. Add the 8 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
+9.3 Connect the output of the stream adder cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
+9.4 Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 8 frequency tones.
+9.5. Configure the frequency and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series] (https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
+
+
+
+
+
 
