@@ -95,18 +95,19 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 9. DDS Multitone generation
 
 9.1. Create 8 separate hierarchies containing:
-   * AXI4 Register Bank 
+   * AXI4 Register Banks for *phase_inc*, *phase_off* and *amplitude*. 
    * DDS wrapper
    * Amplitude control
-   * **Common phase_clr**
 
-9.2. Add the 8 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
+9.2. Use a separate AXI4 Register Bank to provide a common *phase_clr* to all hierarchies.
 
-9.3 Connect the output of the stream adder cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
+9.3. Add the 8 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
 
-9.4 Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 8 frequency tones.
+9.4 Connect the output of the cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
 
-9.5. Configure the frequency and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series] (https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
+9.5 Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 8 frequency tones.
+
+9.6. Configure the frequency, phase and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series] (https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
 
 
 
