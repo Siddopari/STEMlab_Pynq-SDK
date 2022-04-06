@@ -96,14 +96,14 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 
 10. DDS Multitone generation
 
-10.1. Create 8 separate hierarchies containing:
+10.1. Create 4 separate hierarchies containing:
    * AXI4 Register Banks for *phase_inc*, *phase_off* and *amplitude*. 
    * DDS wrapper
    * Amplitude control
 
 10.2. Use a separate AXI4 Register Bank to provide a common *phase_clr* to all hierarchies.
 
-10.3. Add the 8 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
+10.3. Add the 4 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
 
 10.4 Connect the output of the cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
 
