@@ -85,8 +85,8 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 5. Create HDL wrapper and generate bitstream.
 
 6. Create a Jupyter notebook to control the DDS:
-   * **frequency = phase_inc / 2^32 * 125 MHz**
-   * **phase_offset = phase_off / 2^32 * 360 degree** 
+   * **phase_inc frequency = (frequency / 125 MHz) * 2^32**
+   * **phase_off = (phase_offset / 360 degree) * 2^32** 
 
 7. Verify the output on your oscilloscope
 
