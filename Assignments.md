@@ -4,7 +4,7 @@ We are going to implement a digital version of the beautiful [Pendulum Waves Exp
 1. Extend the [LED_blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink) example to use 8 independent counters for every LED of your Redpitaya-125-14 with independently controllable counter **incr** but common **resetn**. 
  
 ---
-ℹ️ The AXI GPIO IP features only 2 register outputs. For more register outputs please use multiple instances of this IP or replace it by an [AXI4 Register Bank](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/tree/main/ip/AXI4-register-bank) IP instance, which has up to 16 independent register inputs/outputs. See [Analog-Echo](analog-echo) design example to import IP library.
+ℹ️ The AXI GPIO IP features only 2 register outputs. For more register outputs please use multiple instances of this IP or replace it by an [AXI4 Register Bank](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/tree/main/ip/AXI4-register-bank) IP instance, which has up to 16 independent register inputs/outputs. See [here](analog-echo#import-the-redpitaya-125-14-ip-library) for instruction to import the corresponding IP library.
 
 ---
 
