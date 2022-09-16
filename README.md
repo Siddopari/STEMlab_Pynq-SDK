@@ -4,7 +4,7 @@ This repository is a collection of hands-on FPGA programming projects for scient
 
 
 ## Table of contents
-* [Introduction](../../wiki/Introduction)
+* [Motivation](../../wiki/Motivation)
 * [Setting up your system](../../wiki/Setting-up-your-system)
 * [Redpitaya & Zynq architecture](../../wiki/Redpitaya-&-Zynq-architecture)
 * Tutorials:
